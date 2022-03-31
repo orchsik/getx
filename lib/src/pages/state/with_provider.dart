@@ -5,8 +5,21 @@ import 'package:provider/provider.dart';
 class WithProvider extends StatelessWidget {
   const WithProvider({Key? key}) : super(key: key);
 
+  Widget _button(BuildContext context) {
+    return ElevatedButton(
+      child: Text("+", style: TextStyle(fontSize: 30)),
+      onPressed: () {
+        Provider.of<CountControllerWithProvider>(context, listen: false)
+            .increase();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    CountControllerWithProvider _povider =
+        Provider.of<CountControllerWithProvider>(context, listen: false);
+
     return Center(
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Text("Provider", style: TextStyle(fontSize: 30)),
@@ -20,10 +33,12 @@ class WithProvider extends StatelessWidget {
         ElevatedButton(
           child: Text("+", style: TextStyle(fontSize: 30)),
           onPressed: () {
-            Provider.of<CountControllerWithProvider>(context, listen: false)
-                .increase();
+            // Provider.of<CountControllerWithProvider>(context, listen: false)
+            //     .increase();
+            _povider.increase();
           },
         ),
+        _button(context),
       ]),
     );
   }
