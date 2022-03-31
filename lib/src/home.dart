@@ -20,9 +20,31 @@ class Home extends StatelessWidget {
                 // Navigator.of(context)
                 //     .push(MaterialPageRoute(builder: (_) => FirstPage()));
                 Get.to(FirstPage());
-              })
+              }),
+          ElevatedButton(
+              child: Text("Named 라우트"),
+              onPressed: () {
+                Get.toNamed("/first");
+              }),
+          ElevatedButton(
+              child: Text("Arguments 전달"),
+              onPressed: () {
+                // Get.toNamed("/next", arguments: {"name": "zznggu", "age": 7});
+                Get.toNamed("/next", arguments: User(name: '짱구', age: 7));
+              }),
+          ElevatedButton(
+              child: Text("동적 url"),
+              onPressed: () {
+                Get.toNamed("/user/0987?name=짱구&age=7");
+              }),
         ]),
       ),
     );
   }
+}
+
+class User {
+  String? name;
+  int? age;
+  User({this.name, this.age});
 }

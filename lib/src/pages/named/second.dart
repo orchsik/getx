@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/src/home.dart';
 
 class SecondNamedPage extends StatelessWidget {
   const SecondNamedPage({Key? key}) : super(key: key);
@@ -26,11 +25,7 @@ class SecondNamedPage extends StatelessWidget {
             ElevatedButton(
               child: Text("홈 이동"),
               onPressed: () {
-                // [old]
-                // Navigator.of(context).pushAndRemoveUntil(
-                //     MaterialPageRoute(builder: (_) => Home()),
-                //     (route) => false);
-                Get.offAll(Home());
+                Get.offAllNamed("/");
               },
             ),
           ],
