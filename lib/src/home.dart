@@ -42,6 +42,11 @@ class Home extends StatelessWidget {
               onPressed: () {
                 Get.toNamed("/simpleState");
               }),
+          ElevatedButton(
+              child: Text("반응형상태관리"),
+              onPressed: () {
+                Get.toNamed("/reactiveState");
+              }),
         ]),
       ),
     );

@@ -4,6 +4,7 @@ import 'package:getx/src/home.dart';
 import 'package:getx/src/pages/named/first.dart';
 import 'package:getx/src/pages/named/second.dart';
 import 'package:getx/src/pages/next.dart';
+import 'package:getx/src/pages/reactive_state_manage_pag.dart';
 import 'package:getx/src/pages/simple_state_manage_page.dart';
 import 'package:getx/src/pages/user.dart';
 
@@ -56,6 +57,11 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: "/simpleState",
           page: () => SimpleStateManagePage(),
+          transition: Transition.zoom,
+        ),
+        GetPage(
+          name: "/reactiveState",
+          page: () => ReactiveStateManagePage(),
           transition: Transition.zoom,
         ),
       ],

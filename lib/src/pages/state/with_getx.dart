@@ -39,6 +39,12 @@ class WithGetX extends StatelessWidget {
                   style: TextStyle(fontSize: 50));
             }),
         ElevatedButton(
+          child: Text("5로 변경", style: TextStyle(fontSize: 30)),
+          onPressed: () {
+            _controller.putNumber(5);
+          },
+        ),
+        ElevatedButton(
           child: Text("+", style: TextStyle(fontSize: 30)),
           onPressed: () {
             // Get.find<CountControllerWithGetX>().increase();
