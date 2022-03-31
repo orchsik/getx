@@ -37,6 +37,11 @@ class Home extends StatelessWidget {
               onPressed: () {
                 Get.toNamed("/user/0987?name=짱구&age=7");
               }),
+          ElevatedButton(
+              child: Text("단순상태관리"),
+              onPressed: () {
+                Get.toNamed("/simpleState");
+              }),
         ]),
       ),
     );
