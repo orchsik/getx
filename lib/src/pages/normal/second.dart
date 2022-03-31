@@ -26,7 +26,10 @@ class SecondPage extends StatelessWidget {
             ElevatedButton(
               child: Text("홈 이동"),
               onPressed: () {
-                // Get.to(Home());
+                // [old]
+                // Navigator.of(context).pushAndRemoveUntil(
+                //     MaterialPageRoute(builder: (_) => Home()),
+                //     (route) => false);
                 Get.offAll(Home());
               },
             ),
