@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/src/binding/binding_page.dart';
+import 'package:getx/src/controllers/count_controller_with_getx.dart';
 import 'package:getx/src/home.dart';
+import 'package:getx/src/pages/binding.dart';
 import 'package:getx/src/pages/named/first.dart';
 import 'package:getx/src/pages/named/second.dart';
 import 'package:getx/src/pages/next.dart';
@@ -64,6 +67,10 @@ class MyApp extends StatelessWidget {
           page: () => ReactiveStateManagePage(),
           transition: Transition.zoom,
         ),
+        GetPage(
+            name: "/binding",
+            page: () => BindingPage(),
+            binding: BindingPageBinding())
       ],
     );
   }
